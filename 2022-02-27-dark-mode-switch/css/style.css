@@ -1,0 +1,126 @@
+/* Box Model Hack
+
+* {
+  box-sizing: border-box;
+}
+
+Clear fix hack
+
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+} */
+
+/******************************************
+/* BASE LAYOUT
+/*******************************************/
+
+body {
+  background: white;
+  color: black;
+  font-size: 62.5%;
+}
+
+/******************************************
+/* LIGHT DARK TOGGLE
+/*******************************************/
+.dark {
+  background: black;
+  color: white;
+}
+
+.light {
+  background: white;
+  color: black;
+}
+
+/* Toggle switch container */
+ .toggle-container {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.toggle-container input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Rear layer of the toggle switch */
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 30px;
+  border: 2px solid black;
+}
+
+input:checked + .toggle {
+  background-color: #333;
+  border: 2px solid white;
+}
+
+/* Front layer of the toggle switch */
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: -2px;
+  bottom: -2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+input:checked + .toggle:before {
+  background-color: black;
+  border: 2px solid white;
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/******************************************
+/* MAIN NAVIGATION
+/*******************************************/
+
+#mainNavigation {
+  width: 95vw;
+}
+
+#mainNavigation ul {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row nowrap;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1rem;
+  gap: 5vw;
+  height: 3rem;
+  justify-content: flex-end;
+  text-transform: uppercase;
+}
+
+#mainNavigation li {
+  flex-basis: auto;
+}
