@@ -32,23 +32,33 @@ h1 {
   font-size: 5vh;
   letter-spacing: 0.5rem;
   padding: 2.5rem;
+  text-align: center;
   text-shadow: 0.1rem 0.1rem 0.5rem #000;
 }
 
 
 input[type=text] {
   border-radius: 5vh;
+  font-family: 'Nunito', sans-serif;
+  font-size: 3vh;
   height: 10vh;
   padding: 2.5rem;
   margin: 2.5rem 0;
-  max-width: 90vw;
+  max-width: 100rem;
   min-width: 30rem;
-  width: 50vw;
+  width: 95vw;
+}
+
+
+input[type=text]::placeholder {
+  font-family: 'Nunito', sans-serif;
+  font-size: 3vh;
 }
 
 
 #logo {
   height: 25vh;
+  max-width: 95vw;
   padding: 2.5rem;
 }
 
@@ -56,4 +66,5 @@ input[type=text] {
 #pokedex {
   height: 50vh;
   padding: 2.5rem;
+  max-width: 95vw;
 }
