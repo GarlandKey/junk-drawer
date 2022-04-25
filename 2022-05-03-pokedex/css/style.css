@@ -1,0 +1,59 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  font-family: 'Nunito', sans-serif;
+  font-size: 62.5%;
+}
+
+
+body {
+  align-items: center;
+  background: radial-gradient(#ffab00, #ff3415);
+  /*
+  background-image: url(../img/type-bkg/normal.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  */
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+
+h1 {
+  color: #fff;
+  font-size: 5vh;
+  letter-spacing: 0.5rem;
+  padding: 2.5rem;
+  text-shadow: 0.1rem 0.1rem 0.5rem #000;
+}
+
+
+input[type=text] {
+  border-radius: 5vh;
+  height: 10vh;
+  padding: 2.5rem;
+  margin: 2.5rem 0;
+  max-width: 90vw;
+  min-width: 30rem;
+  width: 50vw;
+}
+
+
+#logo {
+  height: 25vh;
+  padding: 2.5rem;
+}
+
+
+#pokedex {
+  height: 50vh;
+  padding: 2.5rem;
+}
