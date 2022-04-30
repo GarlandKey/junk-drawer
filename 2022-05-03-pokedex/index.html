@@ -2,10 +2,9 @@
 <html lang="en">
 	<head>
     	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
+    	<meta name="description" content="Pokemon Kanto Pokedex">
 
-		<title>Title in the tab</title>
+		<title>Pokemon Kanto Pokedex</title>
 
 		<!-- fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,13 +16,17 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<img id="logo" src="img/pokemon-logo.svg" alt="Pokemon">
-		<h1>Pokémon Kanto Pokédex</h1>
-		<input id="pokemon" type="text" name="" placeholder="Enter Pokemon Name" value="">
-
-		<img id='pokeImg' src="" alt="">
-		
-		<img id="pokedex" src="img/pokedex.svg" alt="Pokedex">
+		<section class="container">
+			<img id="logo" src="img/pokemon-logo.svg" alt="Pokemon">
+			<h1>Kanto Pokédex</h1>
+			<input id="pokemon-name" type="text" name="" placeholder="Enter Pokemon Name" value="">
+			<section id="pokedex-container">
+				<p id="pokedex-text"></p>
+				<img id="pokedex-light" src="" alt="">
+				<img id='pokemon-img' src="" alt="">
+				<img id="pokedex" src="img/pokedex.svg" alt="Pokedex">
+			</section>
+		</section>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

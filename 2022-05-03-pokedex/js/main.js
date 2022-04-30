@@ -2,10 +2,8 @@
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
-  const poke1 = document.querySelector('#poke1').value
-  const poke2 = document.querySelector('#poke2').value
-  const url = 'https://pokeapi.co/api/v2/pokemon/'+poke1
-  const url2 = 'https://pokeapi.co/api/v2/pokemon/'+poke2
+  const pokemon = document.querySelector('#poke1').value
+  const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
   let pokeStore = []
   let pokeImg = []
 
@@ -19,9 +17,6 @@ function getFetch(){
         fetch(url2)
         .then(res => res.json()) // parse response as JSON
         .then(data => {
-
-          pokeStore.push(data.types[0].type.name)
-          pokeImg.push(data.sprites.front_shiny)
       
           if((pokeStore[0] === "grass" && pokeStore[1] === 'water')){
             document.querySelector('#pokeImg1').src = pokeImg[0]
@@ -44,7 +39,7 @@ function getFetch(){
       
 }
 
-function getPokemonImage() {
+function getPokemonImage(id) {
 
 }
 
