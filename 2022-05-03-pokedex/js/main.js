@@ -1,10 +1,11 @@
+/* 
+ * 
+ */
+
+
+
 // document.querySelector('button').addEventListener('click', getFetch)
-document.querySelector('#pokemon-name').addEventListener('keyup', function() {
-  if (e.key === 'Enter') {
-    console.log(`Enter key pressed.`)
-    getFetch()
-  }
-});
+document.querySelector('#pokemon-name-container').addEventListener('submit', getFetch);
 
 
 function getFetch(){
@@ -41,6 +42,7 @@ function getFetch(){
       });
 }
 
+/*
 type =[
   'bug',
   'dark',
@@ -62,4 +64,6 @@ type =[
   'water'
 ]
 
-// `${pokemon}is a ${data.types.0.type.name} pokemon.`
+`${pokemon}is a ${data.types.0.type.name} pokemon. Average height is ${data.height} foot and avegate weight is ${data.weight} pounds.`
+
+*/
