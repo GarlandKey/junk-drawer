@@ -6,6 +6,9 @@
 
 		<title>Pokemon Kanto Pokedex</title>
 
+	    <!-- font awesome -->
+    	<script src="https://kit.fontawesome.com/e4fc72c080.js" crossorigin="anonymous"></script>
+
 		<!-- fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +22,9 @@
 		<section class="container">
 			<img id="logo" src="img/pokemon-logo.svg" alt="Pokemon">
 			<h1>Kanto Pokédex</h1>
-			<form id="pokemon-name-container">
-				<input id="pokemon-name" type="text" name="" placeholder="Enter Pokemon Name" value="">
+			<form id="pokemon-input-container">
+				<input id="pokemon-input" type="text" name="" placeholder="Enter Pokemon Name" value="">
+				<button id="pokemon-input-button" type="submit"><i class="fa fa-search"></i></button>
 			</form>
 			<section id="pokedex-container">
 				<p id="pokedex-text"></p>
