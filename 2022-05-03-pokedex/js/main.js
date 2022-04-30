@@ -1,18 +1,24 @@
-//Example fetch using pokemonapi.co
-document.querySelector('button').addEventListener('click', getFetch)
+// document.querySelector('button').addEventListener('click', getFetch)
+document.querySelector('#pokemon-name').addEventListener('keyup', function() {
+  if (e.key === 'Enter') {
+    console.log(`Enter key pressed.`)
+    getFetch()
+  }
+});
+
 
 function getFetch(){
-  const pokemon = document.querySelector('#poke1').value
+  const pokemon = document.querySelector('#pokemon-name').value
   const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
-  let pokeStore = []
-  let pokeImg = []
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
 
-        pokeStore.push(data.types[0].type.name)
-        pokeImg.push(data.sprites.front_shiny)
+        console.log(data)
+
+          pokeStore.push(data.types[0].type.name)
+          pokeImg.push(data.sprites.front_shiny)
         
         fetch(url2)
         .then(res => res.json()) // parse response as JSON
@@ -33,14 +39,6 @@ function getFetch(){
       .catch(err => {
           console.log(`error ${err}`)
       });
-
-
-
-      
-}
-
-function getPokemonImage(id) {
-
 }
 
 type =[
@@ -63,3 +61,5 @@ type =[
   'steel',
   'water'
 ]
+
+// `${pokemon}is a ${data.types.0.type.name} pokemon.`
