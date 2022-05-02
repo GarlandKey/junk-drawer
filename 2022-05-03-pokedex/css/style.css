@@ -47,7 +47,7 @@ body {
 }
 
 
-#pokedexContainer {
+#dexContainer {
   height: 55vh;
   max-width: 100%;
   padding: 1vh;
@@ -113,7 +113,16 @@ input[type=text]::placeholder {
 }
 
 
-#pokedex {
+#dexImg {
   height: 100%;
   max-width: 100%;
+  position: relative;
+}
+
+#dexGlow {
+  position: absolute;
+  top: 0.8vh;
+  left: 1.1vh;
+  width: 10vh;
+  z-index: 1;
 }

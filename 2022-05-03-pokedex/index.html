@@ -25,15 +25,15 @@
 		<section class="primaryContainer">
 			<img id="logo" src="img/pokemon-logo.svg" alt="Pokemon">
 			<h1>Kanto Pokédex</h1>
-			<form id="pokemonInputContainer">
+			<form id="pokemonInputContainer" onsubmit="return false">
 				<input id="pokemonInput" type="text" name="" placeholder="Enter Pokemon Name" value="">
 				<button id="pokemonInputBtn" type="button" name="button"><i class="fa fa-search"></i></button>
 			</form>
-			<section id="pokedexContainer">
-				<p id="pokedexText"></p>
-				<img id="pokedexLight" src="" alt="">
-				<img id='pokedexPokemonImg' src="" alt="">
-				<img id="pokedex" src="img/pokedex.svg" alt="Pokedex">
+			<section id="dexContainer">
+				<p id="dexText"></p>
+				<img id="dexGlow" src="img/glow.svg" alt="">
+				<img id='dexPokeImg' src="" alt="">
+				<img id="dexImg" src="img/pokedex.svg" alt="Pokedex">
 			</section>
 		</section>
 		<script type="text/javascript" src="js/main.js"></script>
