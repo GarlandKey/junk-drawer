@@ -24,7 +24,7 @@ body {
 
 /* containers
  *****************************************/
-.container {
+.primaryContainer {
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
@@ -34,7 +34,7 @@ body {
 }
 
 
-#pokemon-input-container {
+#pokemonInputContainer {
   align-items: center;
   background: #fff;
   border: 1vh solid #3663ad;
@@ -42,12 +42,12 @@ body {
   display: flex;
   height: 10vh;
   justify-content: center;
-  padding: 0 2vh;
+  padding: 0 1.25vh;
   width: calc(100% - 3vh);
 }
 
 
-#pokedex-container {
+#pokedexContainer {
   height: 55vh;
   max-width: 100%;
   padding: 1vh;
@@ -91,13 +91,19 @@ input[type=text]:focus {
 
 
 button {
-  background: #fff;
+  background: white;
   border: 0px;
+  border-radius: 3vh;
+  color: #3663ad;
+  height: 6vh;
+  font-size: 3vh;
+  width: 6vh;
 }
 
-.fa-search {
-  color: #3663ad;
-  font-size: 3vh;
+
+button:hover {
+  color: #fff;
+  background: #3663ad;
 }
 
 
