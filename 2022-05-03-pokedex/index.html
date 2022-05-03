@@ -15,7 +15,7 @@
 		<!-- fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Nunito&family=Source+Code+Pro&display=swap" rel="stylesheet"> 
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/reset.css">
@@ -30,10 +30,14 @@
 				<button id="pokemonInputBtn" type="button" name="button"><i class="fa fa-search"></i></button>
 			</form>
 			<section id="dexContainer">
-				<p id="dexText"></p>
-				<img id="dexGlow" src="img/glow.svg" alt="">
-				<img id='dexPokeImg' src="" alt="">
-				<img id="dexImg" src="img/pokedex.svg" alt="Pokedex">
+				<div id="dexImageAlign">
+					<img id="dex" src="img/pokedex.svg" alt="This is the Pokedex.">
+					<div id="dexScreen">
+						<img id='dexPokeImg' src="" alt="">
+					</div>
+					<img class="hidden" id="dexGlow" src="img/glow.svg" alt="">
+					<p id="dexText"></p>
+				</div>
 			</section>
 		</section>
 		<script type="text/javascript" src="js/main.js"></script>

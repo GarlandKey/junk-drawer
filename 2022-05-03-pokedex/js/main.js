@@ -1,23 +1,24 @@
 document.querySelector('#pokemonInputBtn').addEventListener('click', getFetch)
 
 function getFetch(){
-  const pokemon = document.querySelector('#pokemonInput').value.toLowerCase()
-  const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
-  
-  console.log(`user typed: '${pokemon}'`) // DEBUGING -- REMOVE
+  const userInput = document.querySelector('#pokemonInput').value.toLowerCase()
+  const url = `https://pokeapi.co/api/v2/pokemon/${userInput}`
 
   fetch(url)
     .then(res => res.json())
     .then(data => {
+      const pokeName = data.name[0].toUpperCase() + data.name.substring(1)
+      const pokeImg = `../img/pokemon-by-id/${data.id}.webp`
+      const pokeBlurb = `${pokeName} is a ${data.types[0].type.name} type pokemon. ${pokeName}'s average height is ${data.height}m and their average weight is ${data.weight}lbs.`
+
+      document.querySelector('#dexPokeImg').src = pokeImg
+      document.querySelector('#dexText').innerText = pokeBlurb
+
+
       console.log(data) // DEBUGING -- REMOVE
-      const pokeName = `../img/pokemon-by-id/${data.id}.webp`
-      const pokeBlurb = `${pokemon} is a ${data.types[0].type.name} type pokemon. ${pokemon}'s average height is ${data.height} foot and their average weight is ${data.weight} pounds.`
-
-      document.querySelector('#pokedexPokemonImage').src = pokeName`../img/pokemon-by-id/${data.id}.webp`
-
-
-      console.log(`image location: ${pokemonImage}`) // DEBUGING -- REMOVE
-      console.log(`blurb: ${pokemonBlurb}`)
+      console.log(`user typed: '${pokeName}'`) // DEBUGING -- REMOVE
+      console.log(`image location: ${pokeImg}`) // DEBUGING -- REMOVE
+      console.log(`blurb: ${pokeBlurb}`)
 
     })
     .catch(err => {
