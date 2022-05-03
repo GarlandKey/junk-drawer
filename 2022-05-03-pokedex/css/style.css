@@ -127,7 +127,6 @@ input[type=text]::placeholder {
 
 /* frame for pokedex to allow proper alignment of images */
 #dexImageAlign {
-  border: 1px solid lime; /* DEBUGGING -- REMOVE */
   position: relative;
 }
 
@@ -142,7 +141,6 @@ input[type=text]::placeholder {
 /* container for the pokedex screen so that images can be easily centered */
 #dexScreen {
   align-self: center;
-  border: 1px solid lime; /* DEBUGGING -- REMOVE */
   display: flex;
   height: 28%;
   position: absolute;
@@ -155,13 +153,11 @@ input[type=text]::placeholder {
 
 
 #dexPokeImg {
-  border: 1px solid lime; /* DEBUGGING --REMOVE */
   height: 100%;
 }
 
 
 #dexGlow {
-  border: 1px solid lime; /* DEBUGGING --REMOVE */
   left: 0.8%;
   mix-blend-mode: lighten;
   position: absolute;
@@ -173,7 +169,6 @@ input[type=text]::placeholder {
 
 #dexText {
   color: #00ff00;
-  border: 1px solid lime; /* DEBUGGING --REMOVE */
   height: 20.5%;
   filter: blur(0.75px);
   font-family: 'Source Code Pro', monospace;
