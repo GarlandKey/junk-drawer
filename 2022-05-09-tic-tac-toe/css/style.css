@@ -41,9 +41,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 50vh;
-    max-height: 100vh;
-    max-width: 100vh;
-    width: 50vw;
+    width: 50vh;
   }
   
   .space {
@@ -63,4 +61,20 @@
   
   #a1, #a2, #b1, #b2, #c1, #c2 {
     border-right: 1rem solid black;
+  }
+
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 6rem;
+      font-weight: 700;
+      padding-bottom: 2.5rem;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      height: 75vw;
+      width: 75vw;
+    }
   }
